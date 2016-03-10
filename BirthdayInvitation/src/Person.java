@@ -22,14 +22,14 @@ public class Person {
         return "";
     }
 
-    protected String getFirstNameFirst() {
+    protected String formalLabel() {
         String prefix = this.setPrefix();
-        return prefix+" "+name.getFirstName();
+        return prefix+" "+name.formalNameFormat();
     }
 
-    protected String getLastNameFirst() {
+    protected String informalLabel() {
         String prefix = this.setPrefix();
-        return prefix+" "+name.getLastName();
+        return prefix+" "+name.inFormalNameFormat();
     }
 
 
@@ -37,12 +37,12 @@ public class Person {
         setPrefix();
         switch (format) {
             case "--firstLast":
-                return getFirstNameFirst();
+                return formalLabel();
             case "--lastFirst":
-                return getLastNameFirst();
+                return informalLabel();
 
             default:
-                return getFirstNameFirst();
+                return formalLabel();
         }
     }
 }

@@ -6,10 +6,10 @@ public class PersonName {
         this.first = first;
         this.last = last;
     }
-    public String getFirstName(){
+    public String formalNameFormat(){
         return first+" "+last;
     }
-    public String getLastName(){
+    public String inFormalNameFormat(){
         return  last+", "+first;
     }
 }

@@ -4,7 +4,13 @@ public class Country {
     public Country(String country) {
         this.country = country;
     }
-    protected Boolean isSameCountry(String otherCountry){
-        return this.country.equals(otherCountry) ? true : false;
+    protected Boolean isSameCountry(String otherCountry) {
+        return this.country.equals(otherCountry);
+    }
+
+    @Override
+    public String toString() {
+        return country;
     }
 }
+

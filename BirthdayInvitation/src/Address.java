@@ -1,7 +1,7 @@
 public class Address {
-    protected Country country;
-    protected String city;
-    protected String place;
+    private Country country;
+    private String city;
+    private String place;
 
     public Address(String place, String city, Country country){
         this.place = place;

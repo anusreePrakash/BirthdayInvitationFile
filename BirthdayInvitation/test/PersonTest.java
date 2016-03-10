@@ -10,7 +10,7 @@ public class PersonTest {
         Country country = new Country("India");
         Address address = new Address("kolkata", "west bengal", country);
         Person person = new Person(personName, 21, "Male", address);
-        assertEquals("Mr raju mani", person.getFirstNameFirst());
+        assertEquals("Mr raju mani", person.formalLabel());
     }
 
     @Test
@@ -19,7 +19,7 @@ public class PersonTest {
         Country country = new Country("India");
         Address address = new Address("kolkata", "west bengal", country);
         Person person = new Person(personName, 21, "Male", address);
-        assertEquals("Mr mani, raju", person.getLastNameFirst());
+        assertEquals("Mr mani, raju", person.informalLabel());
     }
 
     @Test
@@ -28,7 +28,7 @@ public class PersonTest {
         Country country = new Country("India");
         Address address = new Address("kolkata", "west bengal", country);
         Person person = new Person(personName, 21, "Female", address);
-        assertEquals("Ms nihara arappatt", person.getFirstNameFirst());
+        assertEquals("Ms nihara arappatt", person.formalLabel());
     }
 
     @Test
@@ -37,7 +37,7 @@ public class PersonTest {
         Country country = new Country("India");
         Address address = new Address("kolkata", "west bengal", country);
         Person person = new Person(personName, 21, "Female", address);
-        assertEquals("Ms arappatt, nihara", person.getLastNameFirst());
+        assertEquals("Ms arappatt, nihara", person.informalLabel());
     }
 
     @Test
