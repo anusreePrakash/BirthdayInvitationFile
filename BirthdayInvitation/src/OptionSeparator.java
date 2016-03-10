@@ -14,7 +14,7 @@ public class OptionSeparator {
 //        else
 //            throw new Exception("countries Not Found");
 //    }
-    public String separateChoice() throws Exception {
+    public String choiceSeparator() throws Exception {
         for (String arg : args) {
             if (arg.startsWith("-")) {
                 return arg;
@@ -24,7 +24,7 @@ public class OptionSeparator {
     }
 
 
-    public String separateFile() throws Exception {
+    public String fileSeparator() throws Exception {
         for (String arg : args) {
             File f = new File(arg);
             if (f.exists() && !f.isDirectory())

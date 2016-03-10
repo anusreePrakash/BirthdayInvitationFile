@@ -56,4 +56,13 @@ public class PersonTest {
         Person person = new Person(personName, 21, "Male", address);
         assertEquals("Mr mani, raju", person.getSpecifiedFormat("--lastFirst"));
     }
+    @Test
+    public void getSpecifiedFormatGivesTheUsageIfNoChoiceAreThere() throws Exception {
+        PersonName personName = new PersonName("raju", "mani");
+        Country country = new Country("India");
+        Address address = new Address("kolkata", "west bengal", country);
+        Person person = new Person(personName, 21, "Male", address);
+        String usage = new String("specify the option and file\nusage:LabelPrinter --firstLast records.txt");
+        assertEquals(usage, person.getSpecifiedFormat(""));
+    }
 }

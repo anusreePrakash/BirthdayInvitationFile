@@ -22,14 +22,19 @@ public class Person {
         return "";
     }
 
-    protected String formalLabel() {
+    public String formalLabel() {
         String prefix = this.setPrefix();
         return prefix+" "+name.formalNameFormat();
     }
 
-    protected String informalLabel() {
+    public String informalLabel() {
         String prefix = this.setPrefix();
         return prefix+" "+name.inFormalNameFormat();
+    }
+
+    public String usage(){
+        return "specify the option and file\n" +
+                "usage:LabelPrinter --firstLast records.txt";
     }
 
 
@@ -40,9 +45,8 @@ public class Person {
                 return formalLabel();
             case "--lastFirst":
                 return informalLabel();
-
             default:
-                return formalLabel();
+                return usage();
         }
     }
 }

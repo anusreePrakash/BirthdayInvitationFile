@@ -1,4 +1,3 @@
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class PrintLabel {
@@ -11,7 +10,7 @@ public class PrintLabel {
         this.choice = choice;
     }
 
-    public void consoleLabels() throws IOException {
+    public void consoleLabels() {
         for (Person each : guests) {
             System.out.println(each.getSpecifiedFormat(choice));
         }

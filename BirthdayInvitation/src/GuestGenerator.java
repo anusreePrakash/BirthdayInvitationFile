@@ -1,14 +1,11 @@
 import java.util.ArrayList;
 
 public class GuestGenerator {
-    private  char[] content;
-    private ArrayList<Person> allDetails = new ArrayList<>();
+    private ArrayList<Person> guests = new ArrayList<>();
 
-    public GuestGenerator(char[] content) {
-        this.content = content;
-    }
+    public GuestGenerator() {}
 
-    public ArrayList generateGuests() {
+    public ArrayList<Person> generateGuests(String content) {
         String[] data, csv;
         data = new String(content).split("\n");
         for (String string : data) {
@@ -17,8 +14,8 @@ public class GuestGenerator {
             Country country = new Country(csv[6]);
             Address address = new Address(csv[4], csv[5], country);
             Person person = new Person(personName, Integer.parseInt(csv[3]), csv[2], address);
-            allDetails.add(person);
+            guests.add(person);
         }
-        return allDetails;
+        return guests;
     }
 }
